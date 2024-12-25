@@ -1,13 +1,13 @@
-s = open("24.txt").readline().strip()
+s = open("24.txt").readline().strip() #original file: 10 milllion symbols in a row: "ABCDEFGH"
 m = 0
 k = []
 p = []
 s = s.replace("E", "A")
 for i in s.split("A"):
     if i:
-        k.append(len(i))
+        k.append(len(i)) #appending length of consonants between vowels
     else:
-        p.append(k)
+        p.append(k) #lists are divided according to the principle: a new list if there are several vowels in a row in the original file
         k = []
 app = []
 p = sorted(p, key = len, reverse = True)
